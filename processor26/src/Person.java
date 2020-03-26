@@ -47,7 +47,7 @@ public class Person implements Comparable{
      * @param persons list of persons
      * @return number of all females
      */
-    public int getAmountFemalePersons(ArrayList<Person> persons){
+    public static int getAmountFemalePersons(ArrayList<Person> persons){
         int femaleCounter = 0;
         for (int  i = 0; i < persons.size(); i++){
             if (persons.get(i).getGender() == Gender.FEMALE){
@@ -62,7 +62,7 @@ public class Person implements Comparable{
      * @param persons list of persons.
      * @return number of all males
      */
-    public int getAmountMalePersons(ArrayList<Person> persons){
+    public static int getAmountMalePersons(ArrayList<Person> persons){
         int maleCounter = 0;
         for (int i = 0; i < persons.size(); i++){
             if (persons.get(i).getGender() == Gender.MALE){
@@ -73,7 +73,7 @@ public class Person implements Comparable{
     }
 
 
-    public Person getYoungestPerson(ArrayList<Person> persons){
+    public static Person getYoungestPerson(ArrayList<Person> persons){
         Date youngest = persons.get(0).getBirthday();
 
         Calendar calendar = new GregorianCalendar();
@@ -102,7 +102,7 @@ public class Person implements Comparable{
         return persons.get(indexYoungest);
     }
 
-    public Person getOldestPerson(ArrayList<Person> persons){
+    public static Person getOldestPerson(ArrayList<Person> persons){
         Date oldest = new Date();
         Calendar calendar = new GregorianCalendar();
         Calendar compare = new GregorianCalendar();
