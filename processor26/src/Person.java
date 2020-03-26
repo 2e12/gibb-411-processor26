@@ -1,11 +1,8 @@
+import java.util.Date;
+
 enum Gender{
     FEMALE, MALE;
 }
-
-enum Date{
-    JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER;
-}
-
 
 /**
  * Person class @
