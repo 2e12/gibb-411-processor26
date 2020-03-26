@@ -36,6 +36,7 @@ public class Render {
                 "Sex\t" +
                 "Height\t" +
                 "Weight\t" +
+                "BMI\t" +
                 "Birthday"
         );
     }
@@ -53,6 +54,7 @@ public class Render {
                     person.getGender().toString() + "\t" +
                     person.getHeight() + "\t" +
                     person.getWeight() + "\t" +
+                    person.getBMI() + "\t" +
                     person.getBirthday()
             );
         }

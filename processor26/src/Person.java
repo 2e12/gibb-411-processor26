@@ -28,8 +28,9 @@ public class Person implements Comparable{
         this.birthday = birthday;
     }
 
-    public double getBMI(){
-        return this.weight / (this.height * this.height);
+    public int getBMI(){
+        double height = (double) this.height / 100; // Convert cm to meters
+        return (int)(this.weight / (height * height));
     }
 
 
