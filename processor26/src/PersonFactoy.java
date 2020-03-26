@@ -27,6 +27,7 @@ public class PersonFactoy {
         } catch (ParseException e) {
             System.out.println("Error: Malformed date (required pattern: " + formatter.toPattern() + "): " + line);
         }
+
         Person person = new Person(
                 id,
                 email,
