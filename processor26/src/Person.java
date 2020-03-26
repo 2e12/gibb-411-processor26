@@ -32,13 +32,6 @@ public class Person implements Comparable{
         return this.weight / (this.height * this.height);
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
 
     /**
      * Function to get all readed persons.
