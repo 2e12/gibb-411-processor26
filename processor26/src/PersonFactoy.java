@@ -8,14 +8,14 @@ public class PersonFactoy {
 
         String[] col = line.split(",");
         int id = Integer.valueOf(col[0]);
-        String email = col[1];
+        String email = col[3];
         String lastName = col[2];
-        String firstName = col[3];
-        Gender gender = null;
-        if(col[4] == "Male"){
+        String firstName = col[1];
+        Gender gender = Gender.NOTBIN;
+        if(col[4].equals("Male")){
             gender = Gender.MALE;
         }
-        if(col[4] == "Female"){
+        if(col[4].equals("Female")){
             gender = Gender.FEMALE;
         }
         int height = Integer.valueOf(col[5]);
