@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class PersonFactoy {
     public static Person getPersonFromCsvLine(String line) {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.mm.yy");
 
         String[] col = line.split(",");
         int id = Integer.valueOf(col[0]);
@@ -25,7 +25,7 @@ public class PersonFactoy {
         try {
             birthday = formatter.parse(col[7]);
         } catch (ParseException e) {
-            System.out.println("Error: Malformed date: " + line);
+            System.out.println("Error: Malformed date (required pattern: " + formatter.toPattern() + "): " + line);
         }
         Person person = new Person(
                 id,
