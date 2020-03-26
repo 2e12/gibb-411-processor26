@@ -28,6 +28,10 @@ public class Person implements Comparable{
         this.birthday = birthday;
     }
 
+    public double getBMI(){
+        return this.weight / (this.height * this.height);
+    }
+
     @Override
     public int compareTo(Object o) {
         return 0;
