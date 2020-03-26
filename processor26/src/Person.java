@@ -1,7 +1,7 @@
 import java.util.*;
 
 enum Gender{
-    FEMALE, MALE;
+    FEMALE, MALE, NOTBIN;
 }
 
 /**
@@ -140,5 +140,37 @@ public class Person implements Comparable{
     @Override
     public int compareTo(Object o) {
         return 0;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public Date getBirthday() {
+        return birthday;
     }
 }

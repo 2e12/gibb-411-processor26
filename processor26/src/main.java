@@ -30,6 +30,11 @@ public class main {
     public main(String filePath) {
         this.filePath = filePath;
         this.convertCsvToList(true);
+        draw();
+    }
+
+    public void draw(){
+        Render.drawPersonsList(persons);
     }
 
     /**
