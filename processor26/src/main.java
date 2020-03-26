@@ -1,7 +1,9 @@
 import java.io.*;
+import java.util.ArrayList;
 
 public class main {
     String filePath;
+    ArrayList<Person> persons = new ArrayList<Person>();
 
     /**
      * This functions checks if a valid file path is provided.
@@ -27,18 +29,22 @@ public class main {
      */
     public main(String filePath) {
         this.filePath = filePath;
-        this.convertCsvToList();
+        this.convertCsvToList(true);
     }
 
     /**
      * Converts the csv file provided in this.filePath to a Person ArrayList.
      */
-    public void convertCsvToList(){
+    public void convertCsvToList(Boolean ignoreFirstLine){
         String line;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(this.filePath));
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+                if(ignoreFirstLine){
+                    ignoreFirstLine = false;
+                    continue;
+                }
+                persons.add(PersonFactoy.getPersonFromCsvLine(line));
             }
         } catch (Exception e) {
             e.printStackTrace();
