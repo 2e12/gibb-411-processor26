@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PersonFactoy {
-    public static void getPersonFromCsvLine(String line) {
+    public static Person getPersonFromCsvLine(String line) {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yy");
 
         String[] col = line.split(",");
@@ -28,10 +28,7 @@ public class PersonFactoy {
             System.out.println("Error: Malformed date: " + line);
         }
 
-
-
-
-                Person person = new Person(
+        Person person = new Person(
                 id,
                 email,
                 lastName,
@@ -41,5 +38,6 @@ public class PersonFactoy {
                 weight,
                 birthday
         );
+        return person;
     }
 }
