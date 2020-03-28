@@ -33,6 +33,9 @@ public class main {
         draw();
     }
 
+    /**
+     * Get ("draw") console output.
+     */
     public void draw(){
         Render.drawPersonsList(persons);
     }

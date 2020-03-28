@@ -28,11 +28,14 @@ public class Person implements Comparable{
         this.birthday = birthday;
     }
 
+    /**
+     * Returns the BMI of the person.
+     * @return
+     */
     public int getBMI(){
         double height = (double) this.height / 100; // Convert cm to meters
         return (int)(this.weight / (height * height));
     }
-
 
     /**
      * Function to get all readed persons.
