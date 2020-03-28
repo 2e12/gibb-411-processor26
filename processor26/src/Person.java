@@ -73,6 +73,34 @@ public class Person implements Comparable{
         return maleCounter;
     }
 
+    /**
+     * Function get sorted persons by BMI (ascending)
+     * @param persons persons to be sorted
+     * @param personNumbers the number of persons that should be sorted
+     * @return return sorted amount of persons by BMI
+     */
+    public static List<Person> getPersonsByBMISorted(ArrayList<Person> persons, int personNumbers){
+        if (personNumbers > persons.size()){
+            System.out.println("Param: Person numbers is to high.");
+            return persons;
+        }
+        List<Person> sortedPersons = persons.subList(0, personNumbers);
+
+        int sortedPersonsLength = sortedPersons.size();
+        for (int i = 0; i < sortedPersonsLength; i++){
+             for (int k = 0; k < sortedPersonsLength-i-1; k++){
+                 // Swap Persons by BMI
+                 if (sortedPersons.get(k).getBMI() > sortedPersons.get(k+1).getBMI()){
+                     Person temp = sortedPersons.get(k);
+                     sortedPersons.set(k, sortedPersons.get(k+1));
+                     sortedPersons.set(k+1, temp);
+                 }
+             }
+        }
+
+        return sortedPersons;
+    }
+
 
     public static Person getYoungestPerson(ArrayList<Person> persons){
         Date youngest = persons.get(0).getBirthday();

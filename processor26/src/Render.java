@@ -45,7 +45,7 @@ public class Render {
         drawFactsList(persons);
         lineBreak(3);
         drawPersonsListHeader();
-        for(Person person: persons){
+        for(Person person: Person.getPersonsByBMISorted(persons, 5)){
             System.out.println(
                     person.getId() + "\t" +
                     person.getEmail() + "\t" +
