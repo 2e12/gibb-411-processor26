@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * (C) Haiko Nuding, Gabriel Beutler 2020
+ * INF2018g
+ */
 public class main {
     String filePath;
     ArrayList<Person> persons = new ArrayList<Person>();
