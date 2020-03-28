@@ -3,6 +3,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PersonFactoy {
+    /**
+     * Create a Person object from a CSV line
+     * @param line CSV Line
+     * @return Person object
+     */
     public static Person getPersonFromCsvLine(String line) {
         SimpleDateFormat formatter = new SimpleDateFormat("dd.mm.yy");
 
